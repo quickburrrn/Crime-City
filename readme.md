@@ -1,13 +1,12 @@
 # Crime City
 
 ## Table of content
-[Why Git](#Why-Git)
-
-[Setupp](#Setupp)
-
-[How to do stuff](#how-to-do-stuff)
-
-[Studio file structure](#file-structure)
+- [Why Git](#Why-Git)
+    - [Introduction](#Introduction)
+    - [What we gain](#what-we-gain)
+- [Setupp](#Setupp)
+- [How to do stuff](#how-to-do-stuff)
+- [Studio file structure](#file-structure)
 
 ## Why Git
 
@@ -25,11 +24,53 @@ Some of these features are:
 - **Shared Assets**: Rec Room currently removes unused models upon upload, preventing us from using each other's assets. Git allows everyone access to all models.
 - **Automated tests**: Run unit and integration tests automatically to verify functionality. This is like having robots test our code!
 
-This is just to name some of them
-
-
-## Setupp
+## Setup
 
 ## How to do stuff
 
 ## File structure
+
+> [!Note]
+> We use PascalCase for naming folders.
+
+```mermaid
+flowchart LR;
+    classDef folder fill:#ffd04f,stroke:#0000,stroke-width:1.5px,color:#000000;
+    classDef dynamicFolder fill:#FFA500,stroke:#0000,stroke-width:1.5px,color:#000000,font-style:italic;
+    classDef staticFile fill:#D3D3D3,stroke:#0000,stroke-width:1.5px,color:#000000;
+    classDef dynamicFile fill:#ADD8E6,stroke:#0000,stroke-width:1.5px,color:#000000,font-style:italic;
+    classDef other fill:#90EE90,stroke:#0000,stroke-width:1.5px,color:#000000;
+
+    A(Crime-City/Assets/):::folder 
+    
+    
+    A --- B(Animations/):::folder
+    B --- B1(["All of the animations and animation controllers"]):::staticFile
+
+
+    
+    
+    A --- C(AssetPack/):::folder
+
+    A --- D("Audio/"):::folder
+
+    A --- H("DefaultAssets/"):::folder
+
+    A --- I("Doors/"):::folder
+
+    A --- J("GameGuns/"):::folder
+
+    A --- K("Materials/"):::folder
+
+    A --- L("Moddels/"):::folder
+
+    A --- M("Prefabs/"):::folder
+
+    A --- N("RecRoomStudio/"):::folder
+
+    A --- O("Rooms/"):::folder
+
+    A --- E(["README.md"]):::staticFile
+    A --- F(["requirements.txt"]):::staticFile
+    A --- G(["words.csv"]):::staticFile
+```
